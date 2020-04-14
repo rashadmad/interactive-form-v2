@@ -6,7 +6,6 @@ const usersEmail = document.getElementById('user-email');
 const usersJobRole = document.getElementById('user-email');
 const userSize = document.getElementById('user-size');
 const userDesign = document.getElementById('color');
-const userDesign = document.getElementById('color');
 const userActivities = document.getElementsByClassName('.activities');
 const userPayment = document.getElementById('payment');
 const userCrediCardNumber = document.getElementById('cc-num');
@@ -14,6 +13,7 @@ const userZipCode = document.getElementById('zip');
 const userCv = document.getElementById('cvv');
 const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
+const submitButton = document.querySelector('button');
 
 //project regex
 
