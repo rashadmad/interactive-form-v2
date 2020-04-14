@@ -15,6 +15,9 @@ const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
 const submitButton = document.querySelector('button');
 
+const form = document.getElementById('form');
+
+
 //project regex
 
 const userNameRegex = /^\w|\d+$/;

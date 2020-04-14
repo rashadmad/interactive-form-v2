@@ -8,16 +8,6 @@ function isValidEmail(email) {
     return emailRegex;
 }
 
-// //this is the function where all of the magic will happen
-// const register = () => {
-//     //I dont what my sumbit button working normally just yet 
-//     event.preventDefault()
-//     console.log("your username is: " + usersName.value + "while your email is: " + usersEmail.value);
-// }
-
-submitButton.addEventListener('submit', onSubmit);
-
-function onSubmit(event) {
-    event.preventDefault()
-    console.log(event);
+const submitButtonClicked = () => {
+    console.log("submitbutton clicked");
 }
