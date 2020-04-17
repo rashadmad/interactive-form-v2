@@ -1,6 +1,7 @@
 "use strict";
 //first off need to take in all of the fields that I will be getting data from
 
+const otherInputField = document.getElementById('other-title');
 const usersName = document.getElementById('name');
 const usersEmail = document.getElementById('mail');
 const usersJobRole = document.getElementById('user-email');
