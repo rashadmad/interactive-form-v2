@@ -7,6 +7,7 @@ const usersEmail = document.getElementById('mail');
 const usersJobRole = document.getElementById('user-email');
 const userSize = document.getElementById('user-size');
 const tshirtDesign = document.getElementById('design');
+const colorSelectField = document.getElementById('color');
 const userActivities = document.getElementsByClassName('.activities');
 const userPayment = document.getElementById('payment');
 const userCreditCardNumber = document.getElementById('cc-num');
