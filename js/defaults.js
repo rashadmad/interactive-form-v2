@@ -1,5 +1,4 @@
 //hide the other input field as stated in the instructions
-//tshirtDesign.removeChild(tshirtDesign[0]);
 const otherJobInputFieldDisplay = (displayType) => {
     otherInputField.style.display = displayType;
 }
@@ -26,4 +25,9 @@ const manipulateColorSelectFieldActive = (displayType) => {
         colorSelectField[i].style.display = displayType;
         i++;
     }
+}
+
+//we need to hide the select theme
+const manipulateThemeSelectFieldActive = (displayType) => {
+    tshirtDesign[0].style.display = displayType
 }
