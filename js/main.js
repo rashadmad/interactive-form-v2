@@ -43,6 +43,14 @@ const tshirtDesignChange = () => {
 
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
+//I want to have a general eventListener set up for all of the radio buttons
+const allRadio = document.querySelectorAll("input[type=radio]");
+document.querySelectorAll("input[type=checkbox]").forEach(item => {
+    item.addEventListener('click', event => {
+      console.log("clicked");
+    })
+  })
+
 //this function brings everything together
 const submitButtonClicked = (event) => {
     //at the moment I want to prevent defualt behavior
