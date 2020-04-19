@@ -19,6 +19,14 @@ const submitButton = document.querySelector('button');
 
 const form = document.getElementById('form');
 
+//activities varibles
+const mainConfrenceInput = document.getElementById('mainConfrence'); 
+const javaScriptFrameworksInput = document.getElementById('javaScriptFrameworks');
+const javaScriptLibrariesInput = document.getElementById('javaScriptLibraries');
+const expressWorkshopInput = document.getElementById('expressWorkshop');
+const nodeWorkshopInput = document.getElementById('nodeWorkshop');
+const buildTools = document.getElementById('buildTools');
+const npmWorkshop = document.getElementById('npmWorkshop');
 
 //project regex
 //this handled mutiple names and does not permit numbers

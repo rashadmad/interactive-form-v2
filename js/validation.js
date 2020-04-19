@@ -14,8 +14,9 @@ const isValidZipcode = (userZipCode) => zipCodeRegex.test(userZipCode)
 const isValidCvvCode = (cvvCode) => cvvCodeRegex.test(cvvCode)
 
 
-//I need to set up a system for them selection 
+//I need to set up a system for theam selection 
 const isThemeSelectedEqualJsPuns = () => (tshirtDesign.value === "js puns") ? true : false;
+
 const isThemeSelectedEqualHeartJs = () => (tshirtDesign.value === "heart js") ? true : false;
 
 
