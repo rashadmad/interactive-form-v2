@@ -1,30 +1,49 @@
 // Can only contain letters a-z in lowercase and can be one or two names **first and last names
-const isValidUsername = (userNameValue) => {
-    return userNameRegex.test(userNameValue)
-}
+const isValidUsername = (userNameValue) => userNameRegex.test(userNameValue)
 
 // Must be a valid email address, too be more specific it has to have a @ symbol a . and either a com,org etc...
-const isValidEmail = (userEmailValue) => {
-    return emailRegex.test(userEmailValue)
-}
+const isValidEmail = (userEmailValue) => emailRegex.test(userEmailValue)
 
 // Must be a valid credit card number, digit groups of four
-const isValidCreditCardNumber = (userCreditCardNumberValue) => {
-    return creditCardRegex.test(userCreditCardNumberValue)
-}
+const isValidCreditCardNumber = (userCreditCardNumberValue) => creditCardRegex.test(userCreditCardNumberValue)
 
 // Must be a valid credit card number, digit groups of four
-const isValidZipcode = (userZipCode) => {
-    return zipCodeRegex.test(userZipCode)
-}
+const isValidZipcode = (userZipCode) => zipCodeRegex.test(userZipCode)
 
 // Must be a valid credit card number, digit groups of four
-const isValidCvvCode = (cvvCode) => {
-    return cvvCodeRegex.test(cvvCode)
-}
+const isValidCvvCode = (cvvCode) => cvvCodeRegex.test(cvvCode)
+
 
 //I need to set up a system for them selection 
 const isThemeSelectedEqualJsPuns = () => (tshirtDesign.value === "js puns") ? true : false;
 const isThemeSelectedEqualHeartJs = () => (tshirtDesign.value === "heart js") ? true : false;
+
+const tshirtDesignChange = () => {
+    //we will need to remove the default option becasue it will no longer be able to be valid
+    if (colorSelectField[0].textContent === "Please select a T-shirt theme") {
+        colorSelectField.removeChild(colorSelectField[0])
+    }
+    if(isThemeSelectedEqualJsPuns()){
+        console.log(colorSelectField.children)
+        colorSelectField[0].style.display = "noinlinene";
+        colorSelectField[1].style.display = "inline";
+        colorSelectField[2].style.display = "inline";
+        colorSelectField[3].style.display = "none";
+        colorSelectField[4].style.display = "none";
+        colorSelectField[5].style.display = "none";  
+    }
+    if(isThemeSelectedEqualHeartJs()){
+        console.log(colorSelectField.children)
+        colorSelectField[0].style.display = "none";
+        colorSelectField[1].style.display = "none";
+        colorSelectField[2].style.display = "none";
+        colorSelectField[3].style.display = "inline";
+        colorSelectField[4].style.display = "inline";
+        colorSelectField[5].style.display = "inline";
+    }
+}
+
+tshirtDesign.addEventListener('change', tshirtDesignChange);
+
 
 

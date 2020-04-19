@@ -5,8 +5,8 @@
     //we need the user to focus on the first input field
     usersName.focus()
     otherJobInputFieldDisplay("none");
-    manipulateColorSelectFieldActive("none")
     manipulateThemeSelectFieldActive("none")
+    hideColorSelectField()
 }
 
 
