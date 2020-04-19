@@ -24,8 +24,8 @@ const tshirtDesignChange = () => {
         colorSelectField.removeChild(colorSelectField[0])
     }
     if(isThemeSelectedEqualJsPuns()){
-        console.log(colorSelectField.children)
-        colorSelectField[0].style.display = "noinlinene";
+        colorSelectField.selectedIndex = 0;
+        colorSelectField[0].style.display = "inline";
         colorSelectField[1].style.display = "inline";
         colorSelectField[2].style.display = "inline";
         colorSelectField[3].style.display = "none";
@@ -33,7 +33,7 @@ const tshirtDesignChange = () => {
         colorSelectField[5].style.display = "none";  
     }
     if(isThemeSelectedEqualHeartJs()){
-        console.log(colorSelectField.children)
+        colorSelectField.selectedIndex = 3;
         colorSelectField[0].style.display = "none";
         colorSelectField[1].style.display = "none";
         colorSelectField[2].style.display = "none";
