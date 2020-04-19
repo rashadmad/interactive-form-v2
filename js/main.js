@@ -47,7 +47,7 @@ tshirtDesign.addEventListener('change', tshirtDesignChange);
 const allRadio = document.querySelectorAll("input[type=radio]");
 document.querySelectorAll("input[type=checkbox]").forEach(item => {
     item.addEventListener('click', event => {
-      console.log("clicked");
+        console.log(event.target.dataset.dayAndTime)
     })
   })
 
