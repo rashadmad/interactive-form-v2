@@ -18,39 +18,7 @@ const isValidCvvCode = (cvvCode) => cvvCodeRegex.test(cvvCode)
 const isThemeSelectedEqualJsPuns = () => (tshirtDesign.value === "js puns") ? true : false;
 const isThemeSelectedEqualHeartJs = () => (tshirtDesign.value === "heart js") ? true : false;
 
-const tshirtDesignChange = () => {
 
-    let JsPuns = 0;
-    let HeartJs = 3;
-    //we will need to remove the default option becasue it will no longer be able to be valid
-    if (colorSelectField[0].textContent === "Please select a T-shirt theme") {
-        colorSelectField.removeChild(colorSelectField[0])
-    }
-    if(isThemeSelectedEqualJsPuns()){
-        colorSelectField.selectedIndex = 0;
-        while (JsPuns < colorSelectField.length) {
-            colorSelectField[JsPuns].style.display = "inline";
-            JsPuns++;
-        }
-        while (HeartJs < colorSelectField.length) {
-            colorSelectField[HeartJs].style.display = "none";
-            HeartJs++;
-        }
-    }
-    if(isThemeSelectedEqualHeartJs()){
-        colorSelectField.selectedIndex = 3;
-        while (JsPuns < colorSelectField.length) {
-            colorSelectField[JsPuns].style.display = "none";
-            JsPuns++;
-        }
-        while (HeartJs < colorSelectField.length) {
-            colorSelectField[HeartJs].style.display = "inline";
-            HeartJs++;
-        }
-    }
-}
-
-tshirtDesign.addEventListener('change', tshirtDesignChange);
 
 
 
