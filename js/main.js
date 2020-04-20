@@ -9,6 +9,16 @@
     hideColorSelectField()
 }
 
+const jobRoleChange = () => {
+    if(jobRoleSelect.value === "other"){
+        otherJobInputFieldDisplay("inline");
+    } else {
+        otherJobInputFieldDisplay("none");
+    }
+}
+
+jobRoleSelect.addEventListener('change', jobRoleChange)
+
 const tshirtDesignChange = () => {
 
     let JsPuns = 0;
@@ -43,6 +53,7 @@ const tshirtDesignChange = () => {
 
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
+//we need to disable a checkbox in cases that there are other events selected at that time
 const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
     console.log()
     if(checkboxToDisable !== recentlyCheckedBox && recentlyCheckedBox.checked) {
@@ -72,7 +83,7 @@ document.querySelectorAll("input[type=checkbox]").forEach(item => {
         } 
     });
 });
-//this function brings everything together
+//this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
     //at the moment I want to prevent defualt behavior
     event.preventDefault();
