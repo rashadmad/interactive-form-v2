@@ -43,11 +43,10 @@ const tshirtDesignChange = () => {
 
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
-const disableCheckbox = (checkboxToDisable,currentlyCheckedBox) => {
-    if(checkboxToDisable !== currentlyCheckedBox){
+const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
+    if(checkboxToDisable !== recentlyCheckedBox) {
         checkboxToDisable.disabled = true
-        console.log(checkboxToDisable + "   " + currentlyCheckedBox)
-    } 
+    }
 }
 
 const enableCheckbox = (checkboxToDisable) => {
@@ -61,19 +60,19 @@ const enableCheckbox = (checkboxToDisable) => {
 document.querySelectorAll("input[type=checkbox]").forEach(item => {
  
     item.addEventListener('click', event => {
-        
-        const radioButtonsDayAndTime = event.target.dataset.dayAndTime
+        const checkedCheckBox = event.target
+        const checkboxDayAndTime = event.target.dataset.dayAndTime
         // const checkboxBoolean = (status) => {
         //     radioButtonsDayAndTime.disabled = status
         // }
-        if (radioButtonsDayAndTime === "Tuesday 9am-12pm") {
-            disableCheckbox(javaScriptFrameworksInput,radioButtonsDayAndTime);
-            disableCheckbox(expressWorkshopInput,radioButtonsDayAndTime);
-            enableCheckbox(radioButtonsDayAndTime)
-        } else if (radioButtonsDayAndTime === "Tuesday 1pm-4pm") {
-            disableCheckbox(javaScriptLibrariesInput,radioButtonsDayAndTime);
-            disableCheckbox(nodeWorkshopInput,radioButtonsDayAndTime);
-            enableCheckbox(radioButtonsDayAndTime)
+        if (checkboxDayAndTime === "Tuesday 9am-12pm") {
+            disableCheckbox(javaScriptFrameworksInput,checkedCheckBox);
+            disableCheckbox(expressWorkshopInput,checkedCheckBox);
+            enableCheckbox(checkboxDayAndTime)
+        } else if (checkboxDayAndTime === "Tuesday 1pm-4pm") {
+            disableCheckbox(javaScriptLibrariesInput,checkedCheckBox);
+            disableCheckbox(nodeWorkshopInput,checkedCheckBox);
+            enableCheckbox(checkboxDayAndTime)
         } 
     });
 });
