@@ -43,14 +43,40 @@ const tshirtDesignChange = () => {
 
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
-//I want to have a general eventListener set up for all of the radio buttons
-const allRadio = document.querySelectorAll("input[type=radio]");
-document.querySelectorAll("input[type=checkbox]").forEach(item => {
-    item.addEventListener('click', event => {
-        console.log(event.target.dataset.dayAndTime)
-    })
-  })
+const disableCheckbox = (checkboxToDisable,currentlyCheckedBox) => {
+    if(checkboxToDisable !== currentlyCheckedBox){
+        checkboxToDisable.disabled = true
+        console.log(checkboxToDisable + "   " + currentlyCheckedBox)
+    } 
+}
 
+const enableCheckbox = (checkboxToDisable) => {
+    if(checkboxToDisable.disabled === true){
+        checkboxToDisable.disabled = false;
+        //checkboxToDisable.className =
+    }
+}
+
+//I want to have a general eventListener set up for all of the checkbox buttons
+document.querySelectorAll("input[type=checkbox]").forEach(item => {
+ 
+    item.addEventListener('click', event => {
+        
+        const radioButtonsDayAndTime = event.target.dataset.dayAndTime
+        // const checkboxBoolean = (status) => {
+        //     radioButtonsDayAndTime.disabled = status
+        // }
+        if (radioButtonsDayAndTime === "Tuesday 9am-12pm") {
+            disableCheckbox(javaScriptFrameworksInput,radioButtonsDayAndTime);
+            disableCheckbox(expressWorkshopInput,radioButtonsDayAndTime);
+            enableCheckbox(radioButtonsDayAndTime)
+        } else if (radioButtonsDayAndTime === "Tuesday 1pm-4pm") {
+            disableCheckbox(javaScriptLibrariesInput,radioButtonsDayAndTime);
+            disableCheckbox(nodeWorkshopInput,radioButtonsDayAndTime);
+            enableCheckbox(radioButtonsDayAndTime)
+        } 
+    });
+});
 //this function brings everything together
 const submitButtonClicked = (event) => {
     //at the moment I want to prevent defualt behavior
