@@ -44,15 +44,10 @@ const tshirtDesignChange = () => {
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
 const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
-    if(checkboxToDisable !== recentlyCheckedBox) {
+    if(checkboxToDisable !== recentlyCheckedBox && recentlyCheckedBox.checked) {
         checkboxToDisable.disabled = true
-    }
-}
-
-const enableCheckbox = (checkboxToDisable) => {
-    if(checkboxToDisable.disabled === true){
-        checkboxToDisable.disabled = false;
-        //checkboxToDisable.className =
+    } else {
+        checkboxToDisable.disabled = false
     }
 }
 
@@ -68,11 +63,9 @@ document.querySelectorAll("input[type=checkbox]").forEach(item => {
         if (checkboxDayAndTime === "Tuesday 9am-12pm") {
             disableCheckbox(javaScriptFrameworksInput,checkedCheckBox);
             disableCheckbox(expressWorkshopInput,checkedCheckBox);
-            enableCheckbox(checkboxDayAndTime)
         } else if (checkboxDayAndTime === "Tuesday 1pm-4pm") {
             disableCheckbox(javaScriptLibrariesInput,checkedCheckBox);
             disableCheckbox(nodeWorkshopInput,checkedCheckBox);
-            enableCheckbox(checkboxDayAndTime)
         } 
     });
 });
