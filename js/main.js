@@ -44,10 +44,13 @@ const tshirtDesignChange = () => {
 tshirtDesign.addEventListener('change', tshirtDesignChange);
 
 const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
+    console.log()
     if(checkboxToDisable !== recentlyCheckedBox && recentlyCheckedBox.checked) {
         checkboxToDisable.disabled = true
+        checkboxToDisable.parentNode.classList.add("disabled");
     } else {
         checkboxToDisable.disabled = false
+        checkboxToDisable.parentNode.classList.remove("disabled");
     }
 }
 
