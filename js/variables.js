@@ -1,24 +1,28 @@
 "use strict";
 //first off need to take in all of the fields that I will be getting data from
 
-const jobRoleSelect = document.getElementById('title')
-const otherInputField = document.getElementById('other-title');
+
+/* user name and email */
 const usersName = document.getElementById('name');
 const usersEmail = document.getElementById('mail');
+/* job fields */
+const jobRoleSelect = document.getElementById('title')
+const otherInputField = document.getElementById('other-title');
 const usersJobRole = document.getElementById('user-email');
-const userSize = document.getElementById('user-size');
+/* Shirt section */
 const tshirtDesign = document.getElementById('design');
 const colorSelectField = document.getElementById('color');
+/* activities section */
 const userActivities = document.getElementsByClassName('.activities');
 const userPayment = document.getElementById('payment');
 const userCreditCardNumber = document.getElementById('cc-num');
-const userZipCode = document.getElementById('zip');
 const cardVerificationValue = document.getElementById('cvv');
+const userZipCode = document.getElementById('zip');
 const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
-const submitButton = document.querySelector('button');
 const creditCardField = document.querySelector('credit-card');
-
+/* general form stuffs */
+const submitButton = document.querySelector('button');
 const form = document.getElementById('form');
 
 //activities varibles
