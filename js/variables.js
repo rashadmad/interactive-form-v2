@@ -17,6 +17,7 @@ const cardVerificationValue = document.getElementById('cvv');
 const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
 const submitButton = document.querySelector('button');
+const creditCardField = document.querySelector('credit-card');
 
 const form = document.getElementById('form');
 
