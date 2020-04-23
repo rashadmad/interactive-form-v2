@@ -55,7 +55,6 @@ tshirtDesign.addEventListener('change', tshirtDesignChange);
 
 //we need to disable a checkbox in cases that there are other events selected at that time
 const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
-    console.log()
     if(checkboxToDisable !== recentlyCheckedBox && recentlyCheckedBox.checked) {
         checkboxToDisable.disabled = true
         checkboxToDisable.parentNode.classList.add("disabled");
@@ -94,6 +93,15 @@ const showCreditCardFieldContents = (show) => {
         console.log("false") 
     }
 }
+
+userPayment.addEventListener('change', event => {
+    if (userPayment.value === "credit card"){
+        showCreditCardFieldContents(true);
+        console.log(userPayment.value)
+    } else {
+        showCreditCardFieldContents(false);
+    }
+});
 
 //this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
