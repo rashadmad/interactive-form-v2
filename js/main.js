@@ -83,6 +83,18 @@ document.querySelectorAll("input[type=checkbox]").forEach(item => {
         } 
     });
 });
+
+//i need to empty out the credit card field. I need to be able to toggle the contents
+const showCreditCardFieldContents = (show) => {
+    if(show){
+        creditCardField.innerHTML = originalCreditCardFieldStat  
+        console.log("true") 
+    } else {
+        creditCardField.innerHTML = ""
+        console.log("false") 
+    }
+}
+
 //this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
     //at the moment I want to prevent defualt behavior

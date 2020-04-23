@@ -222,3 +222,7 @@ option {
 .disabled{
 	color: grey;
 }
+
+.is-hidden{
+	display: none;
+}

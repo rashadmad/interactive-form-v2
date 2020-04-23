@@ -20,7 +20,9 @@ const cardVerificationValue = document.getElementById('cvv');
 const userZipCode = document.getElementById('zip');
 const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
-const creditCardField = document.querySelector('credit-card');
+const creditCardField = document.getElementById('credit-card');
+const originalCreditCardFieldStat = creditCardField.innerHTML
+
 /* general form stuffs */
 const submitButton = document.querySelector('button');
 const form = document.getElementById('form');
