@@ -38,11 +38,6 @@ const npmWorkshop = document.getElementById('npmWorkshop');
 
 /* Validation tooltips */
 const userInfo = document.querySelector('.user-info'); 
-// const emailToolTip = document.createElement("<span>Must be a valid email address</span>");
-// const zipCodeToolTip = document.createElement("<span>Must be a valid zipcode</span>");
-// const cvvToolTip = document.createElement("<span>This is the three digit number on the back of your credit card number</span>");
-
-
 
 //project regex
 //this handled mutiple names and does not permit numbers
