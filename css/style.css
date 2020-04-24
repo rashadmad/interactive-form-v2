@@ -226,3 +226,16 @@ option {
 .is-hidden{
 	display: none;
 }
+
+.toolTip{
+  font-size: .8em;
+  position: absolute;
+  padding: 5px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+}
