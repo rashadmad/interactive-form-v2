@@ -108,15 +108,8 @@ userPayment.addEventListener('change', event => {
 const submitButtonClicked = (event) => {
     //at the moment I want to prevent defualt behavior
     event.preventDefault();
-    
     isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
-
-
-    if (isValidEmail(usersEmail.value)){
-        console.log("user email is valid")
-    } else {
-        console.log("user email is not valid")
-    }
+    isThisChoiceValid(isValidEmail(usersEmail.value),usersEmail,"Needs to be a valid email")
     if (isValidCreditCardNumber(userCreditCardNumber.value)){
         console.log("user credit card is valid")
     } else {

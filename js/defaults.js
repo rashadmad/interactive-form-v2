@@ -26,3 +26,8 @@ const hideColorSelectField = () => {
 const manipulateThemeSelectFieldActive = (displayType) => {
     tshirtDesign[0].style.display = displayType
 }
+
+const removeAllTooltips = () => {
+ let AllToolTips = document.getElementsByClassName('tooltip');
+ AllToolTips.style.display = "none"
+}

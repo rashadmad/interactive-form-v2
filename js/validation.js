@@ -28,14 +28,19 @@ const isNodeWorkshopInputSelected = () => (nodeWorkshopInput.checked) ? true : f
 const isBuildToolsSelected = () => (buildTools.checked) ? true : false; 
 const isNpmWorkshopSelected = () => (npmWorkshop.checked) ? true : false; 
 
-const isThisChoiceValid = (choice,inputField,toolTip) => {
+const isThisChoiceValid = (choice,inputField,toolTipText) => {
+
+    const itsParent = inputField.previousSibling.parentNode;
     if (choice){
-        if(userToolTip){userToolTip.remove()} 
-        usersName.style.borderColor = "rgb(111, 157, 220);"
+        if(inputField.previousSibling.className === "toolTip"){
+            itsParent.removeChild(inputField.previousSibling) 
+        };
+        usersName.style.borderColor = "#6f9ddc";
     } else {
-        const userToolTip = document.createElement("span");
-        userToolTip.innerHTML = userToolTip.innerHTML = toolTip
-        userInfo.insertBefore(userToolTip, inputField)
-        usersName.style.borderColor = "red";
+        const toolTip = document.createElement("span");
+        toolTip.innerHTML = toolTipText
+        toolTip.classList.add("toolTip");
+        itsParent.insertBefore(toolTip, inputField)
+        inputField.style.borderColor = "red";
     }
 }
