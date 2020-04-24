@@ -110,27 +110,9 @@ const submitButtonClicked = (event) => {
     event.preventDefault();
     isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
     isThisChoiceValid(isValidEmail(usersEmail.value),usersEmail,"Needs to be a valid email")
-    if (isValidCreditCardNumber(userCreditCardNumber.value)){
-        console.log("user credit card is valid")
-    } else {
-        console.log("user credit card is not valid")
-    }
-    if (isValidZipcode(userZipCode.value)){
-        console.log("user zipcode is valid")
-    } else {
-        console.log("user zipcode is not valid")
-    }
-    if (isValidCvvCode(cardVerificationValue.value)){
-        console.log("user CVV is valid")
-    } else {
-        console.log("user CVV is not valid")
-    }
-    if (isThemeSelectedEqualJsPuns()) {
-        console.log("Js puns theme selected")
-    }
-    if (isThemeSelectedEqualHeartJs()) {
-        console.log("heart js")
-    }
+    isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
+    isValidZipcode (isValidCreditCardNumber(userZipCode.value),userZipCode,"Needs to be a valid zip code")
+    isValidZipcode (isValidCreditCardNumber(cardVerificationValue.value),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")
 }
 
 submitButton.addEventListener('click', submitButtonClicked);
