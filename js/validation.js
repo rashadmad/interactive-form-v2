@@ -28,3 +28,14 @@ const isNodeWorkshopInputSelected = () => (nodeWorkshopInput.checked) ? true : f
 const isBuildToolsSelected = () => (buildTools.checked) ? true : false; 
 const isNpmWorkshopSelected = () => (npmWorkshop.checked) ? true : false; 
 
+const isThisChoiceValid = (choice,inputField,toolTip) => {
+    if (choice){
+        if(userToolTip){userToolTip.remove()} 
+        usersName.style.borderColor = "rgb(111, 157, 220);"
+    } else {
+        const userToolTip = document.createElement("span");
+        userToolTip.innerHTML = userToolTip.innerHTML = toolTip
+        userInfo.insertBefore(userToolTip, inputField)
+        usersName.style.borderColor = "red";
+    }
+}
