@@ -38,9 +38,9 @@ const isThisChoiceValid = (choice,inputField,toolTipText) => {
         inputField.style.borderColor = "#6f9ddc";
     } else {
         //fix issue where tooltips can be recreated over and over agin
-        // if(inputField.previousSibling.className === "toolTip"){
-        //     itsParent.removeChild(inputField.previousSibling)  
-        // }
+        if(inputField.previousSibling.className === "toolTip"){
+            itsParent.removeChild(inputField.previousSibling)  
+        }
         const toolTip = document.createElement("span");
         toolTip.innerHTML = toolTipText
         toolTip.classList.add("toolTip");
