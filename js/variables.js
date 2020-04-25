@@ -13,7 +13,7 @@ const usersJobRole = document.getElementById('user-email');
 const tshirtDesign = document.getElementById('design');
 const colorSelectField = document.getElementById('color');
 /* activities section */
-const userActivities = document.getElementsByClassName('.activities');
+const userActivities = document.getElementsByClassName('activities');
 const userPayment = document.getElementById('payment');
 const userCreditCardNumber = document.getElementById('cc-num');
 const cardVerificationValue = document.getElementById('cvv');

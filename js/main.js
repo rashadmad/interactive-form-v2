@@ -70,10 +70,8 @@ document.querySelectorAll("input[type=checkbox]").forEach(item => {
  
     item.addEventListener('click', event => {
         const checkedCheckBox = event.target
-        const checkboxDayAndTime = event.target.dataset.dayAndTime
-        // const checkboxBoolean = (status) => {
-        //     radioButtonsDayAndTime.disabled = status
-        // }
+        const checkboxDayAndTime = event.target.dataset.dayAndTime 
+
         if (checkboxDayAndTime === "Tuesday 9am-12pm") {
             disableCheckbox(javaScriptFrameworksInput,checkedCheckBox);
             disableCheckbox(expressWorkshopInput,checkedCheckBox);
@@ -104,11 +102,24 @@ userPayment.addEventListener('change', event => {
     }
 });
 
+// const activitiesToolTip = document.createElement("span");
+// activitiesToolTip.innerHTML = "please select at least two activities"
+// userActivities.appendchild(activitiesToolTip);
+
 //this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
-    //at the moment I want to prevent defualt behavior
-    let shouldWeProceed = isValidUsername(usersName.value) * isValidEmail(usersEmail.value) * isValidCreditCardNumber(userCreditCardNumber.value) * isValidZipcode(userZipCode.value) * isValidCvvCode(cardVerificationValue.value)
-    if(shouldWeProceed != 1){
+
+//I want to check every checbox to see if at least two boxes are selected
+let checkBoxesChecked = 0;
+document.querySelectorAll("input[type=checkbox]").forEach(item => {
+    if (item.checked){
+        checkBoxesChecked =+ 1
+    }
+})
+
+    //I want to prevent default behavior when one validation condition is not true
+    let shouldWeProceed = isValidUsername(usersName.value) * isValidEmail(usersEmail.value) * isValidCreditCardNumber(userCreditCardNumber.value) * isValidZipcode(userZipCode.value) * isValidCvvCode(cardVerificationValue.value * areAtLeastTwoCheckBoxesSlected(checkBoxesChecked))
+    if(shouldWeProceed != 1 && checkBoxesChecked < 1){
         event.preventDefault()
     }
     isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
