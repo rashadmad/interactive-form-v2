@@ -38,6 +38,7 @@ const npmWorkshop = document.getElementById('npmWorkshop');
 
 /* Validation tooltips */
 const userInfo = document.querySelector('.user-info'); 
+let checkBoxesChecked = 0;
 
 //project regex
 //this handled mutiple names and does not permit numbers

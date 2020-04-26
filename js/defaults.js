@@ -22,15 +22,6 @@ const hideColorSelectField = () => {
     }
 }
 
-//I want to add an error message for when a user has not selected two activities
-const areAtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
-    returnedValue = false
-    if (amountOfCheckBoxesChecked >= 2) {
-        returnedValue = true;
-    }    
-    return returnedValue
-}
-
 //we need to hide the select theme
 const manipulateThemeSelectFieldActive = (displayType) => {
     tshirtDesign[0].style.display = displayType

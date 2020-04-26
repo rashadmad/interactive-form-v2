@@ -28,6 +28,15 @@ const isNodeWorkshopInputSelected = () => (nodeWorkshopInput.checked) ? true : f
 const isBuildToolsSelected = () => (buildTools.checked) ? true : false; 
 const isNpmWorkshopSelected = () => (npmWorkshop.checked) ? true : false; 
 
+//I want to add an error message for when a user has not selected two activities
+const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
+    returnedValue = false
+    if (amountOfCheckBoxesChecked >= 2) {
+        returnedValue = true;
+    }    
+    return returnedValue
+}
+
 const isThisChoiceValid = (choice,inputField,toolTipText) => {
 
     const itsParent = inputField.previousSibling.parentNode;
@@ -48,3 +57,4 @@ const isThisChoiceValid = (choice,inputField,toolTipText) => {
         inputField.style.borderColor = "red";
     }
 }
+
