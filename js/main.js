@@ -110,17 +110,17 @@ const submitButtonClicked = (event) => {
 
     //I want to prevent default behavior when one validation condition is not true
     let shouldWeProceed = isValidUsername(usersName.value) * isValidEmail(usersEmail.value) * isValidCreditCardNumber(userCreditCardNumber.value) * isValidZipcode(userZipCode.value) * isValidCvvCode(cardVerificationValue.value) * AtLeastTwoCheckBoxesSlected(checkBoxesChecked)
-    debugger
-    if(shouldWeProceed != 1 && checkBoxesChecked < 1){
+    
+    if(shouldWeProceed === 0){
         event.preventDefault()
-    } else {
-        isEnoughActivitiesSelected(areAtLeastTwoCheckBoxesSlected(checkBoxesChecked))
+    } 
+        
         isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
         isThisChoiceValid(isValidEmail(usersEmail.value),usersEmail,"Needs to be a valid email")
         isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
         isThisChoiceValid(isValidZipcode(userZipCode.value),userZipCode,"Needs to be a valid zip code")
         isThisChoiceValid(isValidCvvCode(cardVerificationValue.value),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
-    }
+
 }
 
 submitButton.addEventListener('click', submitButtonClicked);

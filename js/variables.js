@@ -28,6 +28,7 @@ const submitButton = document.querySelector('button');
 const form = document.getElementById('form');
 
 //activities varibles
+const firstLabel = document.getElementsByTagName('label');
 const mainConfrenceInput = document.getElementById('mainConfrence'); 
 const javaScriptFrameworksInput = document.getElementById('javaScriptFrameworks');
 const javaScriptLibrariesInput = document.getElementById('javaScriptLibraries');

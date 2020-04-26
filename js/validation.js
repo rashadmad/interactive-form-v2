@@ -33,7 +33,11 @@ const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 2) {
         returnedValue = true;
-    }    
+    } else {
+        
+        console.log(userActivities)
+    }
+
     return returnedValue
 }
 
