@@ -33,9 +33,11 @@ const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 2) {
         returnedValue = true;
-    } else {
-        
-        console.log(userActivities)
+    } else { 
+        let spanContainer = document.createElement('span');
+        spanContainer.innerHTML = "Please select at least two activities";
+        spanContainer.classList.add("toolTip");
+        labelList[6].parentNode.insertBefore(spanContainer, labelList[6]);
     }
 
     return returnedValue
