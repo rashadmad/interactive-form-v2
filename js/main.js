@@ -74,11 +74,15 @@ const totalCost = (a,b,c,d,e,f,g) => {
 //I want to have a general eventListener set up for all of the checkbox buttons
 document.querySelectorAll("input[type=checkbox]").forEach(activity => {
  
-    activity.addEventListener('click', event => {
 
+    activity.addEventListener('click', event => {
+        spanContainer.textContent = 0;
         const checkedCheckBox = event.target
         const checkboxDayAndTime = event.target.dataset.dayAndTime 
-        console.log(totalCost(mainConfValue(),javaScriptFrameworksValue(),javaScriptLibrarieValue(),expressWorkshopInputValue(),nodeWorkshopInputValue(),buildToolsValue(),npmWorkshopValue()))
+        labelList[13].parentNode.insertBefore(spanContainer, labelList[13]);
+        spanContainer.textContent = '$' + totalCost(mainConfValue(),javaScriptFrameworksValue(),javaScriptLibrarieValue(),expressWorkshopInputValue(),nodeWorkshopInputValue(),buildToolsValue(),npmWorkshopValue());
+        
+
         if (checkboxDayAndTime === "Tuesday 9am-12pm") {
             disableCheckbox(javaScriptFrameworksInput,checkedCheckBox);
             disableCheckbox(expressWorkshopInput,checkedCheckBox);

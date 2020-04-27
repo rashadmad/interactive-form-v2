@@ -38,6 +38,10 @@ const nodeWorkshopInput = document.getElementById('nodeWorkshop');
 const buildTools = document.getElementById('buildTools');
 const npmWorkshop = document.getElementById('npmWorkshop');
 
+let spanContainer = document.createElement('span');
+spanContainer.textContent = '$0'
+labelList[13].parentNode.insertBefore(spanContainer, labelList[13]);
+
 /* Validation tooltips */
 const userInfo = document.querySelector('.user-info'); 
 let checkBoxesChecked = 0;
