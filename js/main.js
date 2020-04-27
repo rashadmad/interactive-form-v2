@@ -65,14 +65,20 @@ const disableCheckbox = (checkboxToDisable,recentlyCheckedBox) => {
     }
 }
 
+//i need to be able to take all of theactivities together and gather a sum
+const totalCost = (a,b,c,d,e,f,g) => {
+   let sum =+ a + b + c + d + e + f + g
+   return sum;
+}
+
 //I want to have a general eventListener set up for all of the checkbox buttons
-document.querySelectorAll("input[type=checkbox]").forEach(item => {
+document.querySelectorAll("input[type=checkbox]").forEach(activity => {
  
-    item.addEventListener('click', event => {
+    activity.addEventListener('click', event => {
 
         const checkedCheckBox = event.target
         const checkboxDayAndTime = event.target.dataset.dayAndTime 
-
+        console.log(totalCost(mainConfValue(),javaScriptFrameworksValue(),javaScriptLibrarieValue(),expressWorkshopInputValue(),nodeWorkshopInputValue(),buildToolsValue(),npmWorkshopValue()))
         if (checkboxDayAndTime === "Tuesday 9am-12pm") {
             disableCheckbox(javaScriptFrameworksInput,checkedCheckBox);
             disableCheckbox(expressWorkshopInput,checkedCheckBox);
@@ -117,7 +123,6 @@ const submitButtonClicked = (event) => {
         isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
         isThisChoiceValid(isValidZipcode(userZipCode.value),userZipCode,"Needs to be a valid zip code")
         isThisChoiceValid(isValidCvvCode(cardVerificationValue.value),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
-
 }
 
 submitButton.addEventListener('click', submitButtonClicked);

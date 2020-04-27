@@ -20,13 +20,22 @@ const isThemeSelectedEqualJsPuns = () => (tshirtDesign.value === "js puns") ? tr
 const isThemeSelectedEqualHeartJs = () => (tshirtDesign.value === "heart js") ? true : false;
 
 //I need to supply boolean values for the activities section
-const isMainConfrenceInputSelected = () => (mainConfrenceInput.checked) ? true : false; 
-const isJavaScriptFrameworksInputSelected = () => (javaScriptFrameworksInput.checked) ? true : false; 
-const isJavaScriptLibrariesInputSelected = () => (javaScriptLibrariesInput.checked) ? true : false; 
-const isExpressWorkshopInputSelected = () => (expressWorkshopInput.checked) ? true : false; 
-const isNodeWorkshopInputSelected = () => (nodeWorkshopInput.checked) ? true : false; 
-const isBuildToolsSelected = () => (buildTools.checked) ? true : false; 
-const isNpmWorkshopSelected = () => (npmWorkshop.checked) ? true : false; 
+const isMainConfrenceInputSelected = () => mainConfrenceInput.checked ? true : false; 
+const isJavaScriptFrameworksInputSelected = () => javaScriptFrameworksInput.checked ? true : false; 
+const isJavaScriptLibrariesInputSelected = () => javaScriptLibrariesInput.checked ? true : false; 
+const isExpressWorkshopInputSelected = () => expressWorkshopInput.checked ? true : false; 
+const isNodeWorkshopInputSelected = () => nodeWorkshopInput.checked ? true : false; 
+const isBuildToolsSelected = () => buildTools.checked ? true : false; 
+const isNpmWorkshopSelected = () => npmWorkshop.checked ? true : false; 
+
+const mainConfValue = () => isMainConfrenceInputSelected() ? 200 : 0;
+const javaScriptFrameworksValue = () => isJavaScriptFrameworksInputSelected() ? 100 : 0;
+const javaScriptLibrarieValue = () => isJavaScriptLibrariesInputSelected() ? 100 : 0;
+const expressWorkshopInputValue = () => isExpressWorkshopInputSelected() ? 100 : 0;
+const nodeWorkshopInputValue = () => isNodeWorkshopInputSelected() ? 100 : 0;
+const buildToolsValue = () => isBuildToolsSelected() ? 100 : 0;
+const npmWorkshopValue = () => isNpmWorkshopSelected() ? 100 : 0;
+
 
 //I want to add an error message for when a user has not selected two activities
 const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
