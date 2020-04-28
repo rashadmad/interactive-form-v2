@@ -80,7 +80,7 @@ document.querySelectorAll("input[type=checkbox]").forEach(activity => {
         const checkedCheckBox = event.target
         const checkboxDayAndTime = event.target.dataset.dayAndTime 
         labelList[13].parentNode.insertBefore(spanContainer, labelList[13]);
-        spanContainer.textContent = '$' + totalCost(mainConfValue(),javaScriptFrameworksValue(),javaScriptLibrarieValue(),expressWorkshopInputValue(),nodeWorkshopInputValue(),buildToolsValue(),npmWorkshopValue());
+        spanContainer.textContent = 'your total is $' + totalCost(mainConfValue(),javaScriptFrameworksValue(),javaScriptLibrarieValue(),expressWorkshopInputValue(),nodeWorkshopInputValue(),buildToolsValue(),npmWorkshopValue());
         
 
         if (checkboxDayAndTime === "Tuesday 9am-12pm") {

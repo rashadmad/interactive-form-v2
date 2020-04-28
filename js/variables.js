@@ -39,7 +39,8 @@ const buildTools = document.getElementById('buildTools');
 const npmWorkshop = document.getElementById('npmWorkshop');
 
 let spanContainer = document.createElement('span');
-spanContainer.textContent = '$0'
+spanContainer.textContent = 'your total is $0';
+spanContainer.classList.add('total')
 labelList[13].parentNode.insertBefore(spanContainer, labelList[13]);
 
 /* Validation tooltips */

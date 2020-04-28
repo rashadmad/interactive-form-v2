@@ -211,6 +211,8 @@ option {
 	}
 
 	label {
+		margin-top: 10px;
+		margin-bottom: 10px;
 		clear: both;
 	}
 }
@@ -238,4 +240,11 @@ option {
   display: inline-block;
   left: 0px;
   top: 0px;
+}
+
+.total{
+	background-color: #fff;
+	padding: 5px;
+	margin: 5px;
+	border-width: 7px;
 }
