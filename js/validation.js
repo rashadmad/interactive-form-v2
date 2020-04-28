@@ -40,11 +40,11 @@ const npmWorkshopValue = () => isNpmWorkshopSelected() ? 100 : 0;
 //I want to add an error message for when a user has not selected two activities
 const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
-    if (amountOfCheckBoxesChecked >= 2) {
+    if (amountOfCheckBoxesChecked >= 1) {
         returnedValue = true;
     } else { 
         let spanContainer = document.createElement('span');
-        spanContainer.innerHTML = "Please select at least one activities";
+        spanContainer.innerHTML = "Please select at least one activity";
         spanContainer.classList.add("toolTip");
         labelList[6].parentNode.insertBefore(spanContainer, labelList[6]);
     }
