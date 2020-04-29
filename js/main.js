@@ -8,6 +8,7 @@
     manipulateThemeSelectFieldActive("none")
     hideColorSelectField()
     userPayment[0].style.display = "none"
+    userPayment.value = "credit card"
 }
 
 const jobRoleChange = () => {
