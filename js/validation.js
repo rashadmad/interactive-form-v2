@@ -42,6 +42,7 @@ const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 1) {
         returnedValue = true;
+        console.log("yo")
     } else { 
         let spanContainer = document.createElement('span');
         spanContainer.innerHTML = "Please select at least one activity";

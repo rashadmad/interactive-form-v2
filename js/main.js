@@ -119,10 +119,12 @@ userPayment.addEventListener('change', event => {
 //this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
 
-    event.preventDefault()
+
     //I want to prevent default behavior when one validation condition is not true
     let shouldWeProceed = isValidUsername(usersName.value) * isValidEmail(usersEmail.value) * isValidCreditCardNumber(userCreditCardNumber.value) * isValidZipcode(userZipCode.value) * isValidCvvCode(cardVerificationValue.value) * AtLeastTwoCheckBoxesSlected(checkBoxesChecked)
-
+    if (shouldWeProceed === 0){
+        event.preventDefault()
+    } 
         isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
         isThisChoiceValid(isValidEmail(usersEmail.value),usersEmail,"Needs to be a valid email")
         isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
