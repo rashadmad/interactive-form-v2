@@ -100,20 +100,36 @@ document.querySelectorAll("input[type=checkbox]").forEach(activity => {
 });
 
 //i need to empty out the credit card field. I need to be able to toggle the contents
-const showCreditCardFieldContents = (show) => {
-    if(show){
-        creditCardField.innerHTML = originalCreditCardFieldStat  
+const showCreditCardFieldContents = (credit,paypal,bitcoin) => {
+    if(credit){
+        creditCardField.innerHTML = originalCreditCardField  
     } else {
         creditCardField.innerHTML = ""
     }
+    if(paypal){
+        paypalSectionField.innerHTML = originalPaypalSectionField  
+    } else {
+        paypalSectionField.innerHTML = ""
+    }
+    if(bitcoin){
+        bitcoinSectionField.innerHTML = originalBitcoinSectionField  
+    } else {
+        bitcoinSectionField.innerHTML = ""
+    }
 }
+
+
 
 userPayment.addEventListener('change', event => {
     if (userPayment.value === "credit card"){
-        showCreditCardFieldContents(true);
-    } else {
-        showCreditCardFieldContents(false);
+        showCreditCardFieldContents(true,false,false);
+    } 
+    if (userPayment.value === "paypal"){
+        showCreditCardFieldContents(false,true,false);
     }
+    if (userPayment.value === "bitcoin"){
+        showCreditCardFieldContents(false,false,true);
+    } 
 });
 
 //this function brings everything together when the register button is pressed

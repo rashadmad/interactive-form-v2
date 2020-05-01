@@ -20,8 +20,13 @@ const cardVerificationValue = document.getElementById('cvv');
 const userZipCode = document.getElementById('zip');
 const userExpMonth = document.getElementById('exp-month');
 const userExpYear = document.getElementById('exp-year');
+/* Payment section */
+const paypalSectionField = document.getElementById('paypal');
+const bitcoinSectionField = document.getElementById('bitcoin');
 const creditCardField = document.getElementById('credit-card');
-const originalCreditCardFieldStat = creditCardField.innerHTML
+const originalCreditCardField = creditCardField.innerHTML;
+const originalPaypalSectionField = paypalSectionField.innerHTML;
+const originalBitcoinSectionField = bitcoinSectionField.innerHTML;
 
 /* general form stuffs */
 const submitButton = document.querySelector('button');
