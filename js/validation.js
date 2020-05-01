@@ -50,7 +50,7 @@ const AtLeastTwoCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
         labelList[6].parentNode.insertBefore(spanContainer, labelList[6]);
     }
 
-    return returnedValue
+    return returnedValue 
 }
 
 const isThisChoiceValid = (choice,inputField,toolTipText) => {

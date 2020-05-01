@@ -1,5 +1,8 @@
 "use strict";
  
+const originalCreditCardField = creditCardField.innerHTML;
+const originalPaypalSectionField = paypalSectionField.innerHTML;
+const originalBitcoinSectionField = bitcoinSectionField.innerHTML;
 //I want to encapsulated these diffrent defaults being set
 {
     //we need the user to focus on the first input field
@@ -9,6 +12,9 @@
     hideColorSelectField()
     userPayment[0].style.display = "none"
     userPayment.value = "credit card"
+
+    bitcoinSectionField.innerHTML = ""
+    paypalSectionField.innerHTML = ""
 }
 
 const jobRoleChange = () => {

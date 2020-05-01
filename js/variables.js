@@ -24,9 +24,6 @@ const userExpYear = document.getElementById('exp-year');
 const paypalSectionField = document.getElementById('paypal');
 const bitcoinSectionField = document.getElementById('bitcoin');
 const creditCardField = document.getElementById('credit-card');
-const originalCreditCardField = creditCardField.innerHTML;
-const originalPaypalSectionField = paypalSectionField.innerHTML;
-const originalBitcoinSectionField = bitcoinSectionField.innerHTML;
 
 /* general form stuffs */
 const submitButton = document.querySelector('button');
