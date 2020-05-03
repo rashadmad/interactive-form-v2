@@ -41,7 +41,6 @@ const npmWorkshopValue = () => isNpmWorkshopSelected() ? 100 : 0;
 const AtLeastOneCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 1) {
-        if ()
         returnedValue = true;
     } else { 
         let spanContainer = document.createElement('span');

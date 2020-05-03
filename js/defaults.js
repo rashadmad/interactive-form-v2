@@ -31,3 +31,8 @@ const removeAllTooltips = () => {
  let AllToolTips = document.getElementsByClassName('tooltip');
  AllToolTips.style.display = "none"
 }
+
+let preventDefaultsOnAllBrowsers = (e) =>{
+    e = e || window.event;
+    e.preventDefault();    
+}

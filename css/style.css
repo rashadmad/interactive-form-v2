@@ -229,7 +229,7 @@ option {
 	display: none;
 }
 
-.toolTip{
+.toolTip, .activitiesToolTip{
   font-size: .8em;
   position: absolute;
   padding: 5px;
