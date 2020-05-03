@@ -41,6 +41,9 @@ const npmWorkshopValue = () => isNpmWorkshopSelected() ? 100 : 0;
 const AtLeastOneCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 1) {
+        if(inputField.previousSibling.className === "activitiesToolTip"){
+            itsParent.removeChild(inputField.previousSibling) 
+        };
         returnedValue = true;
     } else { 
         let spanContainer = document.createElement('span');
