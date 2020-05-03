@@ -41,12 +41,12 @@ const npmWorkshopValue = () => isNpmWorkshopSelected() ? 100 : 0;
 const AtLeastOneCheckBoxesSlected = (amountOfCheckBoxesChecked) => {
     returnedValue = false
     if (amountOfCheckBoxesChecked >= 1) {
+        if ()
         returnedValue = true;
-        console.log("yo")
     } else { 
         let spanContainer = document.createElement('span');
         spanContainer.innerHTML = "Please select at least one activity";
-        spanContainer.classList.add("toolTip");
+        spanContainer.classList.add("activitiesToolTip");
         labelList[6].parentNode.insertBefore(spanContainer, labelList[6]);
     }
 

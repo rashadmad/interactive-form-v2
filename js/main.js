@@ -124,8 +124,6 @@ const showCreditCardFieldContents = (credit,paypal,bitcoin) => {
     }
 }
 
-
-
 userPayment.addEventListener('change', event => {
     if (userPayment.value === "credit card"){
         showCreditCardFieldContents(true,false,false);
