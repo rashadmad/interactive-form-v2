@@ -39,6 +39,7 @@ const expressWorkshopInput = document.getElementById('expressWorkshop');
 const nodeWorkshopInput = document.getElementById('nodeWorkshop');
 const buildTools = document.getElementById('buildTools');
 const npmWorkshop = document.getElementById('npmWorkshop');
+const activitiesTooltipToggled = false;
 
 let spanContainer = document.createElement('span');
 spanContainer.textContent = 'your total is $0';
