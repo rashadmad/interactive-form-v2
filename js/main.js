@@ -149,6 +149,7 @@ const submitButtonClicked = (event) => {
         isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
         isThisChoiceValid(isValidZipcode(userZipCode.value),userZipCode,"Needs to be a valid zip code")
         isThisChoiceValid(isValidCvvCode(cardVerificationValue.value),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
+        showNhideCheckBox(AtLeastOneCheckBoxesSlected(checkBoxesChecked));
     }
 }
 
