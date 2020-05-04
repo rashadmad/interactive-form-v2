@@ -127,12 +127,15 @@ const showCreditCardFieldContents = (credit,paypal,bitcoin) => {
 userPayment.addEventListener('change', event => {
     if (userPayment.value === "credit card"){
         showCreditCardFieldContents(true,false,false);
+        paymentTypeEqualsCreditCard = true
     } 
     if (userPayment.value === "paypal"){
         showCreditCardFieldContents(false,true,false);
+        paymentTypeEqualsCreditCard = false
     }
     if (userPayment.value === "bitcoin"){
         showCreditCardFieldContents(false,false,true);
+        paymentTypeEqualsCreditCard = false
     } 
 });
 
@@ -146,9 +149,9 @@ const submitButtonClicked = (event) => {
         event.preventDefault()
         isThisChoiceValid(isValidUsername(usersName.value),usersName,"Can only contain letters a-z in lowercase")
         isThisChoiceValid(isValidEmail(usersEmail.value),usersEmail,"Needs to be a valid email")
-        isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value),userCreditCardNumber,"Needs to be a valid credit card number")
-        isThisChoiceValid(isValidZipcode(userZipCode.value),userZipCode,"Needs to be a valid zip code")
-        isThisChoiceValid(isValidCvvCode(cardVerificationValue.value),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
+        isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value,paymentTypeEqualsCreditCard),userCreditCardNumber,"Needs to be a valid credit card number")
+        isThisChoiceValid(isValidZipcode(userZipCode.value,paymentTypeEqualsCreditCard),userZipCode,"Needs to be a valid zip code")
+        isThisChoiceValid(isValidCvvCode(cardVerificationValue.value,paymentTypeEqualsCreditCard),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
         showNhideCheckBox(AtLeastOneCheckBoxesSlected(checkBoxesChecked));
     }
 }

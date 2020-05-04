@@ -5,14 +5,36 @@ const isValidUsername = (userNameValue) => userNameRegex.test(userNameValue)
 const isValidEmail = (userEmailValue) => emailRegex.test(userEmailValue)
 
 // Must be a valid credit card number, digit groups of four
-const isValidCreditCardNumber = (userCreditCardNumberValue) => creditCardRegex.test(userCreditCardNumberValue)
+const isValidCreditCardNumber = (userCreditCardNumberValue,type) => {
+    let valueToReturn = false
+    if(type){
+        valueToReturn = creditCardRegex.test(userCreditCardNumberValue) ? true : false
+    } else {
+        valueToReturn = true
+    }
+    return valueToReturn
+}
 
 // Must be a valid credit card number, digit groups of four
-const isValidZipcode = (userZipCode) => zipCodeRegex.test(userZipCode)
-
+const isValidZipcode = (userZipCode,type) => {
+    let valueToReturn = false
+    if(type){
+        valueToReturn = zipCodeRegex.test(userZipCode) ? true : false
+    } else {
+        valueToReturn = true
+    }
+    return valueToReturn
+}
 // Must be a valid credit card number, digit groups of four
-const isValidCvvCode = (cvvCode) => cvvCodeRegex.test(cvvCode)
-
+const isValidCvvCode = (cvvCode,type) => {
+    let valueToReturn = false
+    if(type){
+        valueToReturn = cvvCodeRegex.test(cvvCode) ? true : false
+    } else {
+        valueToReturn = true
+    }
+    return valueToReturn
+}
 
 //I need to set up a system for theam selection 
 const isThemeSelectedEqualJsPuns = () => (tshirtDesign.value === "js puns") ? true : false;
