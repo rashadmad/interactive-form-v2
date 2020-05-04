@@ -52,7 +52,7 @@ let checkBoxesChecked = 0;
 
 //project regex
 //this handled mutiple names and does not permit numbers
-const userNameRegex = /^[a-z ,.'-]+$/;
+const userNameRegex = /^[a-z|A-Z|1-9 ,.'-]+$/;
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const creditCardRegex = /(\d{4})( |-|)(\d{4})( |-|)(\d{4})( |-|)(\d{4})/
 const zipCodeRegex = /^\d{4}\d?$/
