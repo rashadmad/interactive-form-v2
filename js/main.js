@@ -143,7 +143,6 @@ userPayment.addEventListener('change', event => {
 const submitButtonClicked = (event) => {
     //I want to prevent default behavior when one validation condition is not true
     const shouldWeProceed = isValidUsername(usersName.value) && isValidEmail(usersEmail.value) && isValidCreditCardNumber(userCreditCardNumber.value,paymentTypeEqualsCreditCard) && isValidZipcode(userZipCode.value,paymentTypeEqualsCreditCard) && isValidCvvCode(cardVerificationValue.value,paymentTypeEqualsCreditCard) && AtLeastOneCheckBoxesSlected(checkBoxesChecked)
-    debugger;
     if (shouldWeProceed){
         //upon form submission do this
     } else {
