@@ -142,7 +142,8 @@ userPayment.addEventListener('change', event => {
 //this function brings everything together when the register button is pressed
 const submitButtonClicked = (event) => {
     //I want to prevent default behavior when one validation condition is not true
-    const shouldWeProceed = isValidUsername(usersName.value) && isValidEmail(usersEmail.value) && isValidCreditCardNumber(userCreditCardNumber.value) && isValidZipcode(userZipCode.value) && isValidCvvCode(cardVerificationValue.value) && AtLeastOneCheckBoxesSlected(checkBoxesChecked)
+    const shouldWeProceed = isValidUsername(usersName.value) && isValidEmail(usersEmail.value) && isValidCreditCardNumber(userCreditCardNumber.value,paymentTypeEqualsCreditCard) && isValidZipcode(userZipCode.value,paymentTypeEqualsCreditCard) && isValidCvvCode(cardVerificationValue.value,paymentTypeEqualsCreditCard) && AtLeastOneCheckBoxesSlected(checkBoxesChecked)
+    debugger;
     if (shouldWeProceed){
         //upon form submission do this
     } else {
@@ -152,7 +153,7 @@ const submitButtonClicked = (event) => {
         isThisChoiceValid(isValidCreditCardNumber(userCreditCardNumber.value,paymentTypeEqualsCreditCard),userCreditCardNumber,"Needs to be a valid credit card number")
         isThisChoiceValid(isValidZipcode(userZipCode.value,paymentTypeEqualsCreditCard),userZipCode,"Needs to be a valid zip code")
         isThisChoiceValid(isValidCvvCode(cardVerificationValue.value,paymentTypeEqualsCreditCard),cardVerificationValue,"The CVV code is on the back of your credit card, its three digits")    
-        showNhideCheckBox(AtLeastOneCheckBoxesSlected(checkBoxesChecked));
+        showNhideCheckBox(AtLeastOneCheckBoxesSlected(checkBoxesChecked))
     }
 }
 

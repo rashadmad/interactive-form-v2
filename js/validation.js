@@ -8,6 +8,7 @@ const isValidEmail = (userEmailValue) => emailRegex.test(userEmailValue)
 const isValidCreditCardNumber = (userCreditCardNumberValue,type) => {
     let valueToReturn = false
     if(type){
+        debugger
         valueToReturn = creditCardRegex.test(userCreditCardNumberValue) ? true : false
     } else {
         valueToReturn = true
